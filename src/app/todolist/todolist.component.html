@@ -1,0 +1,24 @@
+
+
+<div class="row" style="block-size: 100%;background-color: limegreen;" >
+    <div class="col-sm-6">
+       <h1> <label for="">TODO</label></h1>
+        <input  type="text" class="form-control" value="{{values}}" (input)=setvalue($event)>
+        <button class="btn btn-primary" (click)="display()">click</button>
+        <ul>
+            <li *ngFor="let inex of array"> 
+              {{ inex }}
+              <button  class="btn btn-primary " (click)="remove(inex)" >REMOVE
+                
+              </button>
+              <button  class="btn btn-primary " (click)="move(inex)" >MOVE
+                
+              </button>
+            </li>
+          </ul>
+    </div>
+    <div class="col-sm-6">
+<li *ngFor="let i of mov">{{i}}</li>
+
+</div>
+
